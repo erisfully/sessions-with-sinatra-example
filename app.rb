@@ -10,7 +10,6 @@ class SessionApp < Sinatra::Base
         id: 1,
         name: "Hunter",
         email: "hunter@galvanize.it"
-
       },
       {
         id: 2,
@@ -37,7 +36,7 @@ class SessionApp < Sinatra::Base
   end
 
   get "/sign_out" do
-    session[:user_id] = nil
+    session.delete(:user_id)
     redirect "/"
   end
 
