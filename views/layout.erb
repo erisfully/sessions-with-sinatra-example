@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cookie Demo</title>
+</head>
+<body>
+<h1>Cookie Demo</h1>
+
+<header>
+  <a href="/">Home</a>
+  <% if user %>
+      <p>Welcome, <%= user[:name] %></p>
+      <a href="/sign_out">Sign Out</a>
+  <% else %>
+      <a href="/sign_in">Sign In</a>
+  <% end %>
+</header>
+
+<%= yield %>
+
+</body>
+</html>
