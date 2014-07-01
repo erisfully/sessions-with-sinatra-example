@@ -32,12 +32,13 @@ class SessionApp < Sinatra::Base
   post "/sign_in" do
     user = find_user(params[:name])
     session[:user_id] = user[:id]
-    erb :home, locals: {user: user}
+
+    redirect "/"
   end
 
   get "/sign_out" do
     session[:user_id] = nil
-    erb :home, locals: {user: current_user}
+    redirect "/"
   end
 
   def current_user
