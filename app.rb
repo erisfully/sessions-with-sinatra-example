@@ -1,6 +1,6 @@
 require "sinatra"
 
-class CookieApp < Sinatra::Base
+class SessionApp < Sinatra::Base
   enable :sessions
 
   def initialize
