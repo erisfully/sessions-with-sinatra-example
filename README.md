@@ -50,7 +50,7 @@ You can remove data from it:
 Something like this would be helpful when a user is signing out.
 
 Data that you put into the session in one action is available to other
-actions that come after it:
+actions that are requested after it:
 
         get "/" do
           session[:visited_homepage] = true
